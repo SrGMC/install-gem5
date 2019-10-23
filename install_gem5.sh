@@ -12,3 +12,6 @@ git clone https://gem5.googlesource.com/public/gem5
 wget http://www.m5sim.org/dist/current/m5_system_2.0b3.tar.bz2
 wget http://www.m5sim.org/dist/current/linux-dist.tgz
 wget http://www.gem5.org/dist/m5_benchmarks/v1-splash-alpha.tgz
+
+# Compile ALPHA
+scons ./build/ALPHA/gem5.opt
