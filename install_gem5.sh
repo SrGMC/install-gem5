@@ -1,6 +1,6 @@
 # Update and install dependencies
 sudo apt-get update
-sudo apt-get install swig gcc m4 python python-dev libgoogle-perftools-dev g++ scons git zlib1g-dev protobuf-compiler libprotobuf-dev build-essential python-dev swig python-protobuf libgoogle-perftools-dev automake python-pip -y
+sudo apt-get install swig gcc m4 python python-dev libgoogle-perftools-dev g++ scons git zlib1g-dev protobuf-compiler libprotobuf-dev build-essential python-dev swig python-protobuf libgoogle-perftools-dev automake python-pip libboost-all-dev -y
 
 # Install python dependencies
 pip install six
