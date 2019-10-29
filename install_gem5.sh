@@ -17,17 +17,18 @@ wget http://www.cs.utexas.edu/~parsec_m5/inputsets.txt
 wget http://www.cs.utexas.edu/~parsec_m5/hack_back_ckpt.rcS
 # Download full system files
 wget http://www.m5sim.org/dist/current/m5_system_2.0b3.tar.bz2
-tar xzf m5_system_2.0b3.tar.bz2
-echo "Open gem5/configs/common/SysPaths.py. path should be similar to this:"
-echo "  path = [ ... , '$(pwd)/m5_system_2.0b3' ]"
-echo "Add the following directory to the path variable:"
-echo "  $(pwd)/m5_system_2.0b3"
+tar xjf m5_system_2.0b3.tar.bz2
 cd ..
 
 # Compile ALPHA
 scons ./build/ALPHA/gem5.opt -j 2
 
 echo "Done!"
+echo "Open gem5/configs/common/SysPaths.py. path should be similar to this:"
+echo "  path = [ ... , '$(pwd)/m5_system_2.0b3' ]"
+echo "Add the following directory to the path variable:"
+echo "  $(pwd)/m5_system_2.0b3"
+echo " "
 echo "Run simulations with the following command":
 echo "  ./build/ALPHA/gem5.opt configs/example/fs.py -n 1 --cpu-type=MinorCPU --caches --kernel=vmlinux"
 echo "Feel free to modify and execute diferent scripts"
