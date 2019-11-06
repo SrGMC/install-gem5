@@ -27,7 +27,7 @@ function downloadFiles() {
 
 # Update and install dependencies
 echo "[INFO] Updating and installing dependencies"
-sudo apt-get update && sudo apt-get install swig gcc m4 python python-dev libgoogle-perftools-dev g++ scons git zlib1g-dev protobuf-compiler libprotobuf-dev build-essential python-dev swig python-protobuf libgoogle-perftools-dev automake python-pip libboost-all-dev -y
+sudo apt-get update && sudo apt-get install bzip2 swig gcc m4 python python-dev libgoogle-perftools-dev g++ scons git zlib1g-dev protobuf-compiler libprotobuf-dev build-essential python-dev swig python-protobuf libgoogle-perftools-dev automake python-pip libboost-all-dev -y
 
 if [[ $? -ne 0 ]]; then
 	echo "[ERROR] An error ocurred while installing dependencies"
@@ -80,7 +80,7 @@ mv vmlinux_2.6.27-gcc_4.3.4 m5_system_2.0b3/binaries/vmlinux
 echo "[INFO] Downloading PARSEC disk image replacement. This might take a while"
 wget -q http://www.cs.utexas.edu/~parsec_m5/linux-parsec-2-1-m5-with-test-inputs.img.bz2
 echo "[INFO] Extracting PARSEC disk image. This might take a while"
-tar xjf linux-parsec-2-1-m5-with-test-inputs.img.bz2
+bzip2 -d linux-parsec-2-1-m5-with-test-inputs.img.bz2
 mv linux-parsec-2-1-m5-with-test-inputs.img m5_system_2.0b3/disks/linux-latest.img
 
 cd ..
