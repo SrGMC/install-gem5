@@ -19,6 +19,7 @@ function checkISA() {
 	       echo ""
 	       help
 	       exit
+       fi
 }
 
 if [[ $1 == "--help" ]]; then
