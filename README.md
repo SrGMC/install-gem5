@@ -6,7 +6,7 @@ Script that downloads and compiles gem5 along with the PARSEC benchmarks and Lin
 
 1. Clone the repository: `git clone https://github.com/SrGMC/install-gem5.git`
 2. Allow execution of instal_gem5.sh: `chmod a+x install_gem5.sh`
-3. Run: `install_gem5.sh`
-    - Append a number to choose the number of cores to use in compilation: `install_gem5.sh 8`
+3. Run: `install_gem5.sh <cores> <ISA>`
+    - Check `install_gem5.sh --help` for more information
 
-The script will download the necessary files and compile the ALPHA CPU arquitecture
+The script will download the necessary files and compile with the specified CPU architecture
